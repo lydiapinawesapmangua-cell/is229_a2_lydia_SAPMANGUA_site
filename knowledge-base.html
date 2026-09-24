@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base &amp; Announcements | Pinawe IT Helpdesk</title>
+  <meta name="description" content="Self-service guides, system status and announcements from the Pinawe Software Co. IT Helpdesk.">
+  <meta name="author" content="Pinawe Software Co.">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.svg" alt="Pinawe Software Co. logo" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Pinawe IT Helpdesk</span>
+          <span class="brand-tagline">Support for Pinawe Software Co.</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="knowledge-base.html" aria-current="page">Knowledge Base</a></li>
+          <li><a href="contact.html">Submit a Ticket</a></li>
+        </ul>
+      </nav>
+      <p class="status-pill"><span class="status-dot" aria-hidden="true"></span> All systems operational</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container">
+        <h1>Knowledge Base &amp; Announcements</h1>
+        <p>Search self-service guides before logging a ticket &mdash; many common issues can be solved in a couple of minutes. This page also lists current system announcements and planned maintenance.</p>
+
+        <form class="kb-search" role="search" action="#search-results" method="get">
+          <div class="form-field form-field-grow">
+            <label for="kb-search-input">Search the knowledge base</label>
+            <input type="search" id="kb-search-input" name="q" placeholder="e.g. reset password, VPN, printer">
+          </div>
+          <div class="form-field form-field-end">
+            <label for="kb-category" class="visually-hidden">Filter by category</label>
+            <select id="kb-category" name="category">
+              <option value="all">All categories</option>
+              <option value="account">Account &amp; access</option>
+              <option value="hardware">Hardware</option>
+              <option value="software">Software</option>
+              <option value="network">Network</option>
+            </select>
+          </div>
+          <div class="form-field form-field-end">
+            <button type="submit" class="btn">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-alt" id="search-results" aria-labelledby="guides-heading">
+      <div class="container layout-with-aside">
+        <div>
+          <h2 id="guides-heading">Popular guides</h2>
+          <ul class="article-list">
+            <li>
+              <p class="article-meta">Account &amp; access &middot; Updated 2 Sep 2026</p>
+              <h3><a href="#">Resetting your Pinawe account password</a></h3>
+              <p>Step-by-step instructions for resetting your password yourself, without waiting for a technician.</p>
+            </li>
+            <li>
+              <p class="article-meta">Network &middot; Updated 28 Aug 2026</p>
+              <h3><a href="#">Connecting to the VPN from home</a></h3>
+              <p>Covers installation of the VPN client, first-time login, and troubleshooting a connection that keeps dropping.</p>
+            </li>
+            <li>
+              <p class="article-meta">Hardware &middot; Updated 21 Aug 2026</p>
+              <h3><a href="#">My laptop won't turn on &mdash; what to try first</a></h3>
+              <p>Basic checks to run before logging a hardware ticket, including power and display troubleshooting.</p>
+            </li>
+            <li>
+              <p class="article-meta">Software &middot; Updated 15 Aug 2026</p>
+              <h3><a href="#">Requesting a new software licence</a></h3>
+              <p>How to check the approved software catalogue and request access to a new application.</p>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="panel" aria-labelledby="status-heading">
+          <h2 id="status-heading">System status</h2>
+          <ul>
+            <li><span class="badge badge-low">Operational</span> Email &amp; calendar</li>
+            <li><span class="badge badge-low">Operational</span> Internal wiki</li>
+            <li><span class="badge badge-medium">Monitoring</span> VPN service</li>
+            <li><span class="badge badge-low">Operational</span> Client portal</li>
+          </ul>
+          <p><a href="contact.html">Report an issue &rarr;</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <section aria-labelledby="announcements-heading">
+      <div class="container">
+        <h2 id="announcements-heading">Announcements &amp; planned maintenance</h2>
+        <ul class="article-list">
+          <li>
+            <p class="article-meta">Planned maintenance &middot; 14 Sep 2026, 11:00 pm&ndash;1:00 am</p>
+            <h3>Email system maintenance window</h3>
+            <p>Email delivery may be delayed by up to 20 minutes during this window while we apply security updates. No action is required.</p>
+          </li>
+          <li>
+            <p class="article-meta">Advisory &middot; 5 Sep 2026</p>
+            <h3>Increase in phishing emails impersonating IT</h3>
+            <p>We've seen a rise in emails asking staff to "verify" their password. The real helpdesk will never ask for your password by email. Forward suspicious emails to the security address in <a href="contact.html">Contact</a>.</p>
+          </li>
+          <li>
+            <p class="article-meta">Resolved &middot; 30 Aug 2026</p>
+            <h3>VPN intermittent disconnections</h3>
+            <p>A faulty configuration on one VPN gateway caused intermittent disconnections for remote staff. This was resolved on 30 August; let us know if you're still affected.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Pinawe IT Helpdesk</h2>
+          <p>A support service of Pinawe Software Co., helping staff and clients stay productive.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="knowledge-base.html">Knowledge Base</a></li>
+            <li><a href="contact.html">Submit a Ticket</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: <a href="mailto:pinawesoftware.helpdesk@gmail.com">pinawesoftware.helpdesk@gmail.com</a></li>
+            <li>Phone: <a href="tel:+67572635300">+675 72635300</a></li>
+            <li>Critical incidents: option 1</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pinawe Software Co. IT Helpdesk.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
