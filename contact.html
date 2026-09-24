@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Ticket | Pinawe IT Helpdesk</title>
+  <meta name="description" content="Submit an IT support ticket to the Pinawe Software Co. helpdesk, or book an on-site technician visit.">
+  <meta name="author" content="Pinawe Software Co.">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.svg" alt="Pinawe Software Co. logo" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Pinawe IT Helpdesk</span>
+          <span class="brand-tagline">Support for Pinawe Software Co.</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="knowledge-base.html">Knowledge Base</a></li>
+          <li><a href="contact.html" aria-current="page">Submit a Ticket</a></li>
+        </ul>
+      </nav>
+      <p class="status-pill"><span class="status-dot" aria-hidden="true"></span> All systems operational</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container">
+        <h1>Submit a support ticket</h1>
+        <p>Fields marked <span class="required-flag">*</span> are required. You'll receive a ticket number by email as soon as this form is submitted, and can reply to that email to add more information later.</p>
+      </div>
+    </section>
+
+    <section class="section-alt" aria-labelledby="ticket-form-heading">
+      <div class="container">
+        <h2 id="ticket-form-heading" class="visually-hidden">Ticket details form</h2>
+        <form class="form-panel" action="https://example.com/submit-ticket" method="post" novalidate>
+
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="full-name">Full name <span class="required-flag">*</span></label>
+                <input type="text" id="full-name" name="full-name" autocomplete="name" required minlength="2" maxlength="80">
+              </div>
+              <div class="form-field">
+                <label for="email">Work email <span class="required-flag">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@pinawesoftware.example">
+              </div>
+              <div class="form-field">
+                <label for="employee-id">Employee / client ID</label>
+                <input type="text" id="employee-id" name="employee-id" pattern="[A-Za-z]{2}[0-9]{4,6}" placeholder="e.g. PS10432">
+                <p class="hint">Two letters followed by 4&ndash;6 digits. Leave blank if you don't have one yet.</p>
+              </div>
+              <div class="form-field">
+                <label for="phone">Contact phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9 +()-]{7,15}" placeholder="+675 300 1200">
+              </div>
+              <div class="form-field">
+                <label for="department">Department</label>
+                <select id="department" name="department">
+                  <option value="">Select a department</option>
+                  <option value="engineering">Engineering</option>
+                  <option value="sales">Sales</option>
+                  <option value="finance">Finance</option>
+                  <option value="operations">Operations</option>
+                  <option value="client">External client</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Issue details</legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="category">Category <span class="required-flag">*</span></label>
+                <select id="category" name="category" required>
+                  <option value="">Select a category</option>
+                  <option value="hardware">Hardware</option>
+                  <option value="software">Software</option>
+                  <option value="network">Network &amp; connectivity</option>
+                  <option value="account">Account &amp; access</option>
+                  <option value="security">Security incident</option>
+                  <option value="training">Training request</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="subject">Subject <span class="required-flag">*</span></label>
+                <input type="text" id="subject" name="subject" required maxlength="100" placeholder="Short summary of the issue">
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>Priority <span class="required-flag">*</span></legend>
+              <div class="radio-row">
+                <input type="radio" id="priority-low" name="priority" value="low" checked>
+                <label for="priority-low"><span class="badge badge-low">Low</span> Minor issue, no urgent impact</label>
+              </div>
+              <div class="radio-row">
+                <input type="radio" id="priority-medium" name="priority" value="medium">
+                <label for="priority-medium"><span class="badge badge-medium">Medium</span> Affects my work but I have a workaround</label>
+              </div>
+              <div class="radio-row">
+                <input type="radio" id="priority-high" name="priority" value="high">
+                <label for="priority-high"><span class="badge badge-high">High</span> Blocking my work, no workaround</label>
+              </div>
+              <div class="radio-row">
+                <input type="radio" id="priority-critical" name="priority" value="critical">
+                <label for="priority-critical"><span class="badge badge-critical">Critical</span> Outage affecting multiple people</label>
+              </div>
+            </fieldset>
+
+            <div class="form-field full-width">
+              <label for="description">Describe the issue <span class="required-flag">*</span></label>
+              <textarea id="description" name="description" rows="6" required minlength="20" maxlength="2000" placeholder="What happened, when it started, and any error messages you saw."></textarea>
+              <p class="hint">Minimum 20 characters. Please avoid including passwords in this field.</p>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="attachment">Attach a screenshot or file (optional)</label>
+              <input type="file" id="attachment" name="attachment" accept="image/png, image/jpeg, .pdf" multiple>
+              <p class="hint">PNG, JPEG or PDF, up to 10&nbsp;MB each.</p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Optional: book an on-site visit</legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="visit-date">Preferred date</label>
+                <input type="date" id="visit-date" name="visit-date" min="2026-09-08">
+              </div>
+              <div class="form-field">
+                <label for="visit-time">Preferred time</label>
+                <input type="time" id="visit-time" name="visit-time" min="07:00" max="19:00">
+              </div>
+              <div class="form-field full-width">
+                <label for="location">Building / desk location</label>
+                <input type="text" id="location" name="location" maxlength="120" placeholder="e.g. Level 3, Desk 14, Engineering wing">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-field full-width checkbox-row">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I confirm this request relates to Pinawe Software Co. equipment or services, and I agree to the <a href="#">IT acceptable use policy</a>. <span class="required-flag">*</span></label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit ticket</button>
+            <button type="reset" class="btn btn-outline-dark">Clear form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="other-ways-heading">
+      <div class="container">
+        <h2 id="other-ways-heading">Other ways to reach us</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Email</h3>
+            <p><a href="mailto:pinawesoftware.helpdesk@gmail.com">pinawesoftware.helpdesk@gmail.com</a></p>
+            <p>Best for non-urgent requests and follow-up questions on an existing ticket.</p>
+          </article>
+          <article class="card">
+            <h3>Phone</h3>
+            <p><a href="tel:+67572635300">+675 72635300</a></p>
+            <p>Available during support hours for anything urgent. Select option 2 for critical incidents.</p>
+          </article>
+          <article class="card">
+            <h3>Walk-in</h3>
+            <p>Level 2 Service Desk, Pinawe House</p>
+            <p>Open weekdays, 8:00 am &ndash; 5:00 pm, for hardware drop-off and quick questions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Pinawe IT Helpdesk</h2>
+          <p>A support service of Pinawe Software Co., helping staff and clients stay productive.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="knowledge-base.html">Knowledge Base</a></li>
+            <li><a href="contact.html">Submit a Ticket</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: <a href="mailto:pinawesoftware.helpdesk@gmail.com">pinawesoftware.helpdesk@gmail.com</a></li>
+            <li>Phone: <a href="tel:+67572635300">+675 72635300</a></li>
+            <li>Critical incidents: option 1</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pinawe Software Co. IT Helpdesk.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
