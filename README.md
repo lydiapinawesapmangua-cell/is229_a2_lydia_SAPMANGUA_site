@@ -59,9 +59,5 @@ Live Websites:  https://lydiapinawesapmangua-cell.github.io/is229_a2_lydia_SAPMA
 
 ## AI Declaration
 
-This project was scaffolded with AI assistance (see the AI Use Declaration on the About page — `about.html#ai-declaration`). Before submitting, you should:
-
-- Update the AI Use Declaration table on `about.html` so it reflects exactly what you used AI for on **this** assessment (A3 CSS/styling work), not just the A2 scaffolding.
-- Confirm your declaration matches your unit's academic integrity policy.
-- Update the Published Websites links above once the A3 version is live.
-- Make sure your Git history shows real, incremental commits rather than one large final commit.
+I confirm that I directed and reviewed all AI assistance described above, This declaration is accurate to the best of my
+knowledge at the time of submission.
